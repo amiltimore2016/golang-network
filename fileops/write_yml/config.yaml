@@ -1,0 +1,5 @@
+host: localhost
+ports:
+- 8080
+- 8081
+dns_entry: "0000000"

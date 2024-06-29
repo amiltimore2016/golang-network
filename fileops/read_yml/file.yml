@@ -1,0 +1,7 @@
+---
+host: localhost
+ports:
+  - 80
+  - 443
+
+dns_entry: "www.google.com"
