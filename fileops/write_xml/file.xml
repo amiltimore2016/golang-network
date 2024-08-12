@@ -1,0 +1,7 @@
+<campus name="campus1">
+  <comment>Building Comment</comment>
+  <building name="building2">
+    <comment>Device Comment</comment>
+    <device name="RTR-1" type="router"></device>
+  </building>
+</campus>

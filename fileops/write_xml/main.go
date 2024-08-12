@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	"fmt"
 	"os"
 )
 
@@ -27,12 +26,19 @@ type Device struct {
 }
 
 func main() {
-	data, _ := os.ReadFile("campus.xml")
-	camp := &Campus{}
+	camp := &Campus{
+		Name:    "campus1",
+		Comment: "Building Comment",
+		Building: Building{
+			Name:    "building2",
+			Comment: "Device Comment",
+			Device: Device{
+				Name: "RTR-1",
+				Type: "router",
+			},
+		},
+	}
 
-	_ = xml.Unmarshal([]byte(data), &camp)
-
-	fl := fmt.Println
-
-	fl("Campus Name: ", camp.Name)
+	indt, _ := xml.MarshalIndent(camp, "", "  ")
+	_ = os.WriteFile("file.xml", indt, 0644)
 }

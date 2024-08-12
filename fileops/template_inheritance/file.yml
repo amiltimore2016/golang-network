@@ -1,0 +1,16 @@
+base:
+  hostname: router1
+
+bgp:
+  as: 1234
+  ip: 4.4.4.4
+  neighbors:
+    - ip: 1.1.1.1
+      as: 2345
+    - ip: 5.5.5.5
+      as: 3456
+
+ntp:
+  source: loopback0
+  primary: 3.3.3.3
+  secondary: 2.2.2.2
